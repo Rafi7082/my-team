@@ -1,0 +1,269 @@
+
+/* ---font-awesone-- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#menu {
+    width: 960px;
+    min-height: 38px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    background-color: #4E4E4E;
+    border-bottom: 5px solid orange;
+}
+
+#menu li {
+    border-right: 1px solid #605B5B;
+    border-left: 1px solid #2B2A2A;
+    position: relative;
+
+
+}
+
+#menu li:first-child {
+    border-left: none;
+}
+
+#menu li:last-child {
+    border-right: none;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    background-color: #4E4E4E;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+#menu li a:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#menu li ul {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    display: none;
+}
+
+#menu li ul li {
+    width: 200px;
+    border-right: none;
+    border-left: none;
+    position: relative;
+    display: block;
+    border-top: 1px solid #605B5B;
+    border-bottom: 1px solid #2B2A2A;
+}
+
+#menu li:hover ul {
+    display: block;
+}
+
+#menu li ul li ul {
+    position: absolute;
+    left: -99999px;
+    top: 0;
+
+}
+
+#menu li ul li:hover ul {
+    left: 200px;
+
+}
+.first-section {
+    border-bottom: 20px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.players {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.player {
+    width: 330px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player-photo img {
+    width: 330px;
+}
+
+.player-details h3 {
+    width: 300px;
+    height: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    font-style: normal;
+    margin: 0;
+
+}
+
+.player-details p {
+    width: 300px;
+    height: 104px;
+}
+
+/* ------second-section------ */
+.second-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 100px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.section-tittle {
+    margin-right: 80px;
+    width: 469px;
+    height: 120px;
+}
+
+.section-tittle h3 {
+    width: 469px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0;
+    margin-right: 20px;
+    color: #0A0826;
+    margin-top: 50px;
+}
+
+.section-para p {
+    width: 404px;
+    height: 113px;
+    margin: 0;
+}
+
+.section-photo img {
+    width: 567px;
+    height: 400px;
+}
+
+.anchor {
+    text-decoration: none;
+    display: block;
+    background: #E02C6D;
+    width: 100px;
+    height: 24px;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    position: relative;
+
+}
+
+.fa-arrow-right {
+    position: absolute;
+    top: 15px;
+    left: 120px;
+}
+
+/* -----footer---- */
+.footer {
+    width: 485px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.footer-photo img {
+    width: 480px;
+    height: 110px;
+}
+
+
+/* ----responsive--- */
+
+@media only screen and (min-width:329px) and (max-width:688px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .second-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .section-tittle {
+        width: 100%;
+
+        height: 100%;
+    }
+
+    .section-tittle h3,
+    .section-para p {
+        margin-left: 285px;
+    }
+
+    .anchor {
+        margin-left: 285px;
+    }
+
+    .section-photo img {
+        width: 100%;
+        margin-left: 285px;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 285px;
+    }
+}
+
+/* -------iPAd */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+
+    }
+
+    .section-photo img {
+        width: 295px;
+        height: 250px;
+    }
+
+    .section-tittle h3 {
+        width: 75%;
+        margin-top: 0;
+    }
+
+    .second-section {
+        margin-bottom: 170px;
+    }
+}
